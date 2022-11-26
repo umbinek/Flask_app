@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="stylesheet" href="/static/tab.css">
+   </head>
+   <body>
+      <h3>Tabulka zobrazující dotazy</h3>
+      <table id="query" border = 1>
+         <thead>
+            <td>Jméno</td>
+            <td>Email</td>
+            <td>Dotaz</td>
+            
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["name"]}}</td>
+               <td>{{row["addr"]}}</td>
+               <td> {{ row["query"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      <!--style mi nefunguje v css, tak je tady -_- a stejně nefujnguje --> 
+      <a id="back" style="text-align: center;" href = "/">Zpět na úvodní stránku</a> 
+      
+   </body>
+</html>
